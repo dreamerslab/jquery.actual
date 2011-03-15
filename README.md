@@ -1,0 +1,66 @@
+# jQuery Actual Plugin
+
+Get the actual width/height of invisible DOM elements with jQuery.
+
+## Description
+
+Older version of jQuery has trouble finding the width/height of invisible DOM elements. With element or its parent element has css property 'display' set to 'none'. `$('.hidden').width();` will return 0 instead of the actual width; This plugin simply fix it;
+
+## Requires
+  - jQuery 1.2.3+
+
+## Browser Compatibility
+  - [Firefox](http://mzl.la/RNaI) 2.0+
+  - [Internet Explorer](http://bit.ly/9fMgIQ) 6+
+  - [Safari](http://bit.ly/gMhzVR) 3+
+  - [Opera](http://bit.ly/fWJzaC) 10.6+
+  - [Chrome](http://bit.ly/ePHvYZ) 8+
+
+## Installation
+  - First, make sure you are using valid [DOCTYPE](http://bit.ly/hQK1Rk)
+  - Include nessesary JS files
+
+<!-- -->
+
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+      <script type="text/javascript" src="path-to-file/jquery.actual.js"></script>
+
+## Usage
+Example code:
+      
+      // get hidden element actaul width
+      $( '.hidden' ).actual( 'width' );
+      
+      // get hidden element actaul innerWidth
+      $( '.hidden' ).actual( 'innerWidth' );
+      
+      // get hidden element actaul outerWidth
+      $( '.hidden' ).actual( 'outerWidth' );
+      
+      // get hidden element actaul height
+      $( '.hidden' ).actual( 'height' );
+      
+      // get hidden element actaul innerHeight
+      $( '.hidden' ).actual( 'innerHeight' );
+      
+      // get hidden element actaul outerHeight
+      $( '.hidden' ).actual( 'outerHeight' );
+      
+      // if the page jumps or blinks, pass a attribute '{ absolute : true }'
+      // be very careful, you might get a wrong result depends on how you makrup your html and css
+      $( '.hidden' ).actual( 'height', { absolute : true });
+      
+      // if you use css3pie with a float element 
+      // for example a rounded corner navigation menu you can also try to pass a a attribute '{ clone : true }'
+      // please see demo/css3pie in action
+      $( '.hidden' ).actual( 'width', { clone : true });
+
+## Demo
+ - Normal usage see demo/normal.html 
+ - If you use [css3pie](http://css3pie.com/) you might also want to take a look at another demo( demo/css3pie.html )
+
+## License
+
+The expandable plugin is licensed under the MIT License (LICENSE.txt).
+
+Copyright (c) 2011 [Ben Lin](http://dreamerslab.com)
