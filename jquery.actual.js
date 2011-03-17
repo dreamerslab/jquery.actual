@@ -7,11 +7,11 @@
 */
 $.fn.extend({
   actual : function( method, options ){
+    var $hidden, $target, configs, css, tmp, actual, fix, restore;
+    
     // check if the jQuery method exist
     // maybe we can skip this and let jQuery to show the debug msg
     if( !this[ method ]) throw '$.actual => The jQuery method "' + method + '" you called is not exist';
-
-    var $hidden, $target, configs, css, tmp, actual, fix, restore;
 
     configs = $.extend({
       absolute : false,
