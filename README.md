@@ -28,22 +28,22 @@ Older version of jQuery has trouble finding the width/height of invisible DOM el
 ## Usage
 Example code:
       
-      // get hidden element actaul width
+      // get hidden element actual width
       $( '.hidden' ).actual( 'width' );
       
-      // get hidden element actaul innerWidth
+      // get hidden element actual innerWidth
       $( '.hidden' ).actual( 'innerWidth' );
       
-      // get hidden element actaul outerWidth
+      // get hidden element actual outerWidth
       $( '.hidden' ).actual( 'outerWidth' );
       
-      // get hidden element actaul height
+      // get hidden element actual height
       $( '.hidden' ).actual( 'height' );
       
-      // get hidden element actaul innerHeight
+      // get hidden element actual innerHeight
       $( '.hidden' ).actual( 'innerHeight' );
       
-      // get hidden element actaul outerHeight
+      // get hidden element actual outerHeight
       $( '.hidden' ).actual( 'outerHeight' );
       
       // if the page jumps or blinks, pass a attribute '{ absolute : true }'
