@@ -4,7 +4,7 @@ Get the actual width/height of invisible DOM elements with jQuery.
 
 ## Description
 
-Older version of jQuery has trouble finding the width/height of invisible DOM elements. With element or its parent element has css property 'display' set to 'none'. `$('.hidden').width();` will return 0 instead of the actual width; This plugin simply fix it;
+Older version of jQuery has trouble finding the width/height of invisible DOM elements. With element or its parent element has css property 'display' set to 'none'. `$('.hidden').width();` will return 0 instead of the actual width; This plugin simply fix it
 
 ## Requires
   - jQuery 1.2.3+
@@ -51,13 +51,19 @@ Example code:
       $( '.hidden' ).actual( 'height', { absolute : true });
       
       // if you use css3pie with a float element 
-      // for example a rounded corner navigation menu you can also try to pass a a attribute '{ clone : true }'
+      // for example a rounded corner navigation menu you can also try to pass a attribute '{ clone : true }'
       // please see demo/css3pie in action
       $( '.hidden' ).actual( 'width', { clone : true });
 
 ## Demo
  - Normal usage see demo/normal.html 
  - If you use [css3pie](http://css3pie.com/) you might also want to take a look at another demo( demo/css3pie.html )
+ - Online version please take a look at [this](http://dreamerslab.com/demos/get-hidden-element-width-with-jquery-actual-plugin) and [this](http://dreamerslab.com/demos/get-hidden-element-width-with-jquery-actual-plugin-with-css3pie/)
+
+## Documentation
+ - There is a syntax highlight version, please see [this post](http://dreamerslab.com/blog/en/get-hidden-elements-width-and-height-with-jquery/)
+ - For chinese version please go [here](http://dreamerslab.com/blog/tw/get-hidden-elements-width-and-height-with-jquery/)
+
 
 ## License
 
