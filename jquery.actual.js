@@ -11,7 +11,7 @@ $.fn.extend({
     
     // check if the jQuery method exist
     // maybe we can skip this and let jQuery to show the debug msg
-    if( !this[ method ]) throw '$.actual => The jQuery method "' + method + '" you called is not exist';
+    if( !this[ method ]) throw '$.actual => The jQuery method "' + method + '" you called does not exist';
 
     configs = $.extend({
       absolute : false,
@@ -30,7 +30,7 @@ $.fn.extend({
       } :
       function(){
         
-        // get get all hidden parents
+        // get all hidden parents
         $hidden = $target.parents().andSelf().filter( ':hidden' );
 
         css = configs.absolute === true ?
