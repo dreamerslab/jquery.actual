@@ -1,7 +1,7 @@
 /*! Copyright 2011, Ben Lin (http://dreamerslab.com/)
 * Licensed under the MIT License (LICENSE.txt).
 *
-* Version: 1.0.3
+* Version: 1.0.4
 *
 * Requires: jQuery 1.2.3+
 */
@@ -17,7 +17,8 @@
       
       configs = $.extend({
         absolute : false,
-        clone : false
+        clone : false,
+        includeMargin : undefined
       }, options );
 
       $target = this;
@@ -74,7 +75,8 @@
       fix();
       // get the actual value with user specific methed
       // it can be 'width', 'height', 'outerWidth', 'innerWidth'... etc
-      actual = $target[ method ]();
+      // configs.includeMargin only works for 'outerWidth
+      actual = $target[ method ]( configs.includeMargin );
 
       restore();
       // IMPORTANT, this plugin only return the value of the first element

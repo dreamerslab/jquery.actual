@@ -46,6 +46,9 @@ Example code:
       // get hidden element actual outerHeight
       $( '.hidden' ).actual( 'outerHeight' );
       
+      // get hidden element actual outerHeight and set the `includeMargin` argument
+      $( '.hidden' ).actual( 'outerHeight', { includeMargin : true });
+      
       // if the page jumps or blinks, pass a attribute '{ absolute : true }'
       // be very careful, you might get a wrong result depends on how you makrup your html and css
       $( '.hidden' ).actual( 'height', { absolute : true });

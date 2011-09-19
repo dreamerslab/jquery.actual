@@ -1,5 +1,11 @@
 # jQuery Actual Plugin CHANGELOG
 
+## 1.0.4
+
+* Add `includeMargin` for `outerWidth`( thanks to Erwin Derksen )
+
+
+
 ## 1.0.3
 
 * Fix `$` namespace conflict
