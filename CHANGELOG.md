@@ -1,5 +1,11 @@
 # jQuery Actual Plugin CHANGELOG
 
+## 1.0.5
+
+* Add package.json for new jquery plugin site
+
+
+
 ## 1.0.4
 
 * Add `includeMargin` for `outerWidth`( thanks to Erwin Derksen )
