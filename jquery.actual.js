@@ -1,9 +1,9 @@
 /*! Copyright 2011, Ben Lin (http://dreamerslab.com/)
 * Licensed under the MIT License (LICENSE.txt).
 *
-* Version: 1.0.5
+* Version: 1.0.6
 *
-* Requires: jQuery 1.2.3+
+* Requires: jQuery 1.2.3 ~ 1.7.1
 */
 ;( function( $ ){
   $.fn.extend({
@@ -14,7 +14,7 @@
       if( !this[ method ]){
         throw '$.actual => The jQuery method "' + method + '" you called does not exist';
       }
-      
+
       configs = $.extend({
         absolute : false,
         clone : false,
@@ -22,7 +22,7 @@
       }, options );
 
       $target = this;
-      
+
       if( configs.clone === true ){
         fix = function(){
           // this is useful with css3pie
@@ -31,7 +31,7 @@
             top : -1000
           }).appendTo( 'body' );
         };
-        
+
         restore = function(){
           // remove DOM element after getting the width
           $target.remove();
@@ -60,7 +60,7 @@
             tmp.push( _tmp );
           });
         };
-        
+
         restore = function(){
           // restore origin style values
           $hidden.each( function( i ){
@@ -75,8 +75,10 @@
       fix();
       // get the actual value with user specific methed
       // it can be 'width', 'height', 'outerWidth', 'innerWidth'... etc
-      // configs.includeMargin only works for 'outerWidth
-      actual = $target[ method ]( configs.includeMargin );
+      // configs.includeMargin only works for 'outerWidth' and 'outerHeight'
+      actual = /(outer)/g.test( method ) ?
+        $target[ method ]( configs.includeMargin ) :
+        $target[ method ]();
 
       restore();
       // IMPORTANT, this plugin only return the value of the first element

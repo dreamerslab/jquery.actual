@@ -1,5 +1,11 @@
 # jQuery Actual Plugin CHANGELOG
 
+## 1.0.6
+
+* [bug fixed] Pass `configs.includeMargin` to only `outerWidth` and `outerHeight` so it does not break in $ 1.7.2
+
+
+
 ## 1.0.5
 
 * Add package.json for new jquery plugin site

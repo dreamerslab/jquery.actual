@@ -6,7 +6,7 @@ Get the actual width/height of invisible DOM elements with jQuery.
 
 ## Description
 
-Older version of jQuery has trouble finding the width/height of invisible DOM elements. With element or its parent element has css property 'display' set to 'none'. `$('.hidden').width();` will return 0 instead of the actual width; This plugin simply fix it.
+Older version of jQuery(>=1.7.1) has trouble finding the width/height of invisible DOM elements. With element or its parent element has css property 'display' set to 'none'. `$('.hidden').width();` will return 0 instead of the actual width; This plugin simply fix it.
 
 
 
@@ -24,7 +24,7 @@ Older version of jQuery has trouble finding the width/height of invisible DOM el
 
 
 ## Requires
-  - jQuery 1.2.3+
+  - jQuery 1.2.3 ~ 1.7.1
 
 
 
