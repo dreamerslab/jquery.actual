@@ -1,4 +1,4 @@
-/*! Copyright 2011, Ben Lin (http://dreamerslab.com/)
+/* Copyright 2011, Ben Lin (http://dreamerslab.com/)
 * Licensed under the MIT License (LICENSE.txt).
 *
 * Version: 1.0.6
@@ -36,7 +36,7 @@
           // remove DOM element after getting the width
           $target.remove();
         };
-      }else{
+      }else {
         fix = function(){
           // get all hidden parents
           $hidden = $target.parents().andSelf().filter( ':hidden' );
@@ -47,29 +47,24 @@
 
           tmp = [];
 
-          // save the origin style props
-          // set the hidden el css to be got the actual value later
-          $hidden.each( function(){
-            var _tmp = {}, name;
-            for( name in css ){
-              // save current style
-              _tmp[ name ] = this.style[ name ];
-              // set current style to proper css style
-              this.style[ name ] = css[ name ];
-            }
-            tmp.push( _tmp );
+          // save the original style
+          $hidden.each( function() {
+           var $this = $(this);
+             // Save original style. If no style was set, attr() returns undefined
+             tmp.push( $this.attr("style") );
+             $this.css(css);
           });
         };
 
         restore = function(){
-          // restore origin style values
-          $hidden.each( function( i ){
-            var _tmp = tmp[ i ], name;
-            for( name in css ){
-              this.style[ name ] = _tmp[ name ];
-            }
+          // restore original style values
+          $hidden.each( function( i ) {
+            var $this = $(this), _tmp = tmp[ i ];
+            if (_tmp === undefined) { $this.removeAttr("style"); }
+            else                    { $this.attr("style", _tmp); }
           });
         };
+
       }
 
       fix();
