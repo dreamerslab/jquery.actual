@@ -2,9 +2,9 @@
 
 ## 1.0.7
 
-Save/restore element style rather than individual CSS attributes. It is much faster on restore,
-as well as more correct. Restoring CSS attributes will create element style where none originally
-existed.
+* [refactoring] Save/restore element style rather than individual CSS attributes( thanks to Jon Tara )
+
+
 
 ## 1.0.6
 
@@ -26,19 +26,19 @@ existed.
 
 ## 1.0.3
 
-* Fix `$` namespace conflict
+* [bug fixed] `$` namespace conflict
 
 
 
 ## 1.0.2
 
-* Fix typo in in actual.js
+* [bug fixed] Typo
 
 
 
 ## 1.0.1
 
-* Fix typo
+* [bug fixed] Typo
 
 
 
