@@ -5,33 +5,41 @@
 *
 * Requires: jQuery 1.2.3 ~ 1.7.2
 */
-;( function( $ ){
+;( function ( $ ){
   $.fn.extend({
-    actual : function( method, options ){
+    actual : function ( method, options ){
       // check if the jQuery method exist
       if( !this[ method ]){
         throw '$.actual => The jQuery method "' + method + '" you called does not exist';
       }
 
-      var configs = $.extend({
+      var defaults = {
         absolute      : false,
         clone         : false,
         includeMargin : undefined
-      }, options );
+      };
+
+      var configs = $.extend( defaults, options );
 
       var $target = this;
       var fix, restore;
 
       if( configs.clone === true ){
-        fix = function(){
-          // this is useful with css3pie
-          $target = $target.filter( ':first' ).clone().css({
+        fix = function (){
+          var css = {
             position : 'absolute',
             top      : -1000
-          }).appendTo( 'body' );
+          };
+
+          // this is useful with css3pie
+          $target = $target.
+            filter( ':first' ).
+            clone().
+            css( css ).
+            appendTo( 'body' );
         };
 
-        restore = function(){
+        restore = function (){
           // remove DOM element after getting the width
           $target.remove();
         };
@@ -39,9 +47,12 @@
         var tmp = [];
         var $hidden, css;
 
-        fix = function(){
+        fix = function (){
           // get all hidden parents
-          $hidden = $target.parents().andSelf().filter( ':hidden' );
+          $hidden = $target.
+            parents().
+            andSelf().
+            filter( ':hidden' );
 
           css = {
             visibility : 'hidden',
@@ -52,7 +63,7 @@
 
           // save the origin style props
           // set the hidden el css to be got the actual value later
-          $hidden.each( function(){
+          $hidden.each( function (){
             var $this = $( this );
 
             // Save original style. If no style was set, attr() returns undefined
@@ -61,9 +72,9 @@
           });
         };
 
-        restore = function(){
+        restore = function (){
           // restore origin style values
-          $hidden.each( function( i ){
+          $hidden.each( function ( i ){
             var $this = $( this );
             var _tmp  = tmp[ i ];
 
