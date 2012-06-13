@@ -1,5 +1,11 @@
 # jQuery Actual Plugin CHANGELOG
 
+## 1.0.8
+
+* [bug fix] Inverted code lines
+
+
+
 ## 1.0.7
 
 * [refactoring] Save/restore element style rather than individual CSS attributes( thanks to Jon Tara )
