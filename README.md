@@ -6,11 +6,12 @@ Get the actual width/height of invisible DOM elements with jQuery.
 
 ## Description
 
-Older version of jQuery(>=1.7.1) has trouble finding the width/height of invisible DOM elements. With element or its parent element has css property 'display' set to 'none'. `$('.hidden').width();` will return 0 instead of the actual width; This plugin simply fix it.
+jQuery has trouble finding the width/height of invisible DOM elements. With element or its parent element has css property 'display' set to 'none'. `$('.hidden').width();` will return 0 instead of the actual width; This plugin simply fix it.
 
 
 
 ## Demo
+
 - Normal usage see demo/normal.html
 - If you use [css3pie](http://css3pie.com/) you might also want to take a look at another demo( demo/css3pie.html )
 - Live demo please take a look at [this](http://dreamerslab.com/demos/get-hidden-element-width-with-jquery-actual-plugin) and [this](http://dreamerslab.com/demos/get-hidden-element-width-with-jquery-actual-plugin-with-css3pie/)
@@ -18,17 +19,20 @@ Older version of jQuery(>=1.7.1) has trouble finding the width/height of invisib
 
 
 ## Documentation
+
 - There is a syntax highlight version, please see [this post](http://dreamerslab.com/blog/en/get-hidden-elements-width-and-height-with-jquery/)
 - For chinese version please go [here](http://dreamerslab.com/blog/tw/get-hidden-elements-width-and-height-with-jquery/)
 
 
 
 ## Requires
-- jQuery 1.2.3 ~ 1.7.1
+
+- jQuery 1.2.3 ~ 1.7.2
 
 
 
 ## Browser Compatibility
+
 - [Firefox](http://mzl.la/RNaI) 2.0+
 - [Internet Explorer](http://bit.ly/9fMgIQ) 6+
 - [Safari](http://bit.ly/gMhzVR) 3+
@@ -49,6 +53,7 @@ Older version of jQuery(>=1.7.1) has trouble finding the width/height of invisib
 
 
 ## Usage
+
 Example code:
 
     // get hidden element actual width
@@ -97,4 +102,4 @@ Example code:
 
 The expandable plugin is licensed under the MIT License (LICENSE.txt).
 
-Copyright (c) 2011 [Ben Lin](http://dreamerslab.com)
+Copyright (c) 2012 [Ben Lin](http://dreamerslab.com)
