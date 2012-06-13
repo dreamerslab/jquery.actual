@@ -1,9 +1,9 @@
-/*! Copyright 2011, Ben Lin (http://dreamerslab.com/)
+/*! Copyright 2012, Ben Lin (http://dreamerslab.com/)
 * Licensed under the MIT License (LICENSE.txt).
 *
-* Version: 1.0.7
+* Version: 1.0.8
 *
-* Requires: jQuery 1.2.3 ~ 1.7.1
+* Requires: jQuery 1.2.3 ~ 1.7.2
 */
 ;( function( $ ){
   $.fn.extend({
@@ -20,7 +20,6 @@
       }, options );
 
       var $target = this;
-
       var fix, restore;
 
       if( configs.clone === true ){
@@ -56,9 +55,9 @@
           $hidden.each( function(){
             var $this = $( this );
 
-            $this.css( css );
             // Save original style. If no style was set, attr() returns undefined
             tmp.push( $this.attr( 'style' ));
+            $this.css( css );
           });
         };
 
