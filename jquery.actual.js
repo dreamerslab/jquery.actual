@@ -16,7 +16,7 @@
       var defaults = {
         absolute      : false,
         clone         : false,
-        includeMargin : undefined
+        includeMargin : false
       };
 
       var configs = $.extend( defaults, options );
