@@ -27,7 +27,7 @@ jQuery has trouble finding the width/height of invisible DOM elements. With elem
 
 ## Requires
 
-- jQuery 1.2.3 ~ 1.7.2
+- jQuery 1.2.3 ~ 1.8.0
 
 
 

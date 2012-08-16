@@ -1,7 +1,7 @@
 /*! Copyright 2012, Ben Lin (http://dreamerslab.com/)
 * Licensed under the MIT License (LICENSE.txt).
 *
-* Version: 1.0.8
+* Version: 1.0.9
 *
 * Requires: jQuery 1.2.3 ~ 1.7.2
 */
