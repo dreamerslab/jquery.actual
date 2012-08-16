@@ -26,16 +26,13 @@
 
       if( configs.clone === true ){
         fix = function (){
-          var css = {
-            position : 'absolute',
-            top      : -1000
-          };
+          var style = 'position: absolute !important; top: -1000 !important';
 
           // this is useful with css3pie
           $target = $target.
             filter( ':first' ).
             clone().
-            css( css ).
+            attr( 'style', style ).
             appendTo( 'body' );
         };
 
@@ -45,7 +42,7 @@
         };
       }else{
         var tmp = [];
-        var $hidden, css;
+        var $hidden, style;
 
         fix = function (){
           // get all hidden parents
@@ -54,12 +51,9 @@
             andSelf().
             filter( ':hidden' );
 
-          css = {
-            visibility : 'hidden',
-            display    : 'block'
-          };
+            style += 'visibility: hidden !important; display: block !important; ';
 
-          if( configs.absolute === true ) css.position = 'absolute';
+          if( configs.absolute === true ) style += 'position: absolute !important';
 
           // save the origin style props
           // set the hidden el css to be got the actual value later
@@ -68,7 +62,7 @@
 
             // Save original style. If no style was set, attr() returns undefined
             tmp.push( $this.attr( 'style' ));
-            $this.css( css );
+            $this.attr( 'style', style );
           });
         };
 
