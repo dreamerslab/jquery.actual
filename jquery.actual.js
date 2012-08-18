@@ -1,9 +1,9 @@
 /*! Copyright 2012, Ben Lin (http://dreamerslab.com/)
 * Licensed under the MIT License (LICENSE.txt).
 *
-* Version: 1.0.9
+* Version: 1.0.10
 *
-* Requires: jQuery 1.2.3 ~ 1.7.2
+* Requires: jQuery 1.2.3 ~ 1.8.20
 */
 ;( function ( $ ){
   $.fn.extend({
@@ -26,7 +26,7 @@
 
       if( configs.clone === true ){
         fix = function (){
-          var style = 'position: absolute !important; top: -1000 !important';
+          var style = 'position: absolute !important; top: -1000 !important; ';
 
           // this is useful with css3pie
           $target = $target.
@@ -51,9 +51,9 @@
             andSelf().
             filter( ':hidden' );
 
-            style += 'visibility: hidden !important; display: block !important; ';
+          style += 'visibility: hidden !important; display: block !important; ';
 
-          if( configs.absolute === true ) style += 'position: absolute !important';
+          if( configs.absolute === true ) style += 'position: absolute !important; ';
 
           // save the origin style props
           // set the hidden el css to be got the actual value later
