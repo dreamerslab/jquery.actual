@@ -95,6 +95,8 @@ Example code:
 
 - Erwin Derksen
 - [Jon Tara](https://github.com/jtara)
+- [Matt Hinchliffe](https://github.com/i-like-robots)
+- [Ryan Millikin](https://github.com/dhamma)
 
 
 

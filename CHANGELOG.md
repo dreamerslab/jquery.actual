@@ -1,5 +1,11 @@
 # jQuery Actual Plugin CHANGELOG
 
+## 1.0.10
+
+- [bug fix] Override `!imporant` css declarations
+
+
+
 ## 1.0.9
 
 - [bug fix] jQuery 1.8.0 compatibility
