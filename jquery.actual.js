@@ -3,7 +3,7 @@
 *
 * Version: 1.0.10
 *
-* Requires: jQuery 1.2.3 ~ 1.8.20
+* Requires: jQuery 1.2.3 ~ 1.8.0
 */
 ;( function ( $ ){
   $.fn.extend({
