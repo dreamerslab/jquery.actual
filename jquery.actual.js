@@ -1,10 +1,10 @@
 /*! Copyright 2012, Ben Lin (http://dreamerslab.com/)
-* Licensed under the MIT License (LICENSE.txt).
-*
-* Version: 1.0.10
-*
-* Requires: jQuery 1.2.3 ~ 1.8.0
-*/
+ * Licensed under the MIT License (LICENSE.txt).
+ *
+ * Version: 1.0.11
+ *
+ * Requires: jQuery 1.2.3 ~ 1.8.2
+ */
 ;( function ( $ ){
   $.fn.extend({
     actual : function ( method, options ){
@@ -21,7 +21,7 @@
 
       var configs = $.extend( defaults, options );
 
-      var $target = this;
+      var $target = this.filter( ':first' );
       var fix, restore;
 
       if( configs.clone === true ){
@@ -30,7 +30,6 @@
 
           // this is useful with css3pie
           $target = $target.
-            filter( ':first' ).
             clone().
             attr( 'style', style ).
             appendTo( 'body' );
