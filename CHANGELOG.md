@@ -1,5 +1,11 @@
 # jQuery Actual Plugin CHANGELOG
 
+## 1.0.11
+
+- [refactoring] Select only the first hidden element to improve the perfomance
+
+
+
 ## 1.0.10
 
 - [bug fix] Override `!imporant` css declarations
