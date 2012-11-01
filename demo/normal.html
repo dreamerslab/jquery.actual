@@ -49,29 +49,29 @@
       <p>
         Try to switch between position, visibility, display, opacity to see how the result is.
       </p>
-      
+
       <form id="options">
         <label>#outer</label>
-        <input class="outer" type="checkbox" name="position" value="absolute" /> 
+        <input class="outer" type="checkbox" name="position" value="absolute" />
         position: absolute<br />
-        <input class="outer" type="checkbox" name="visibility" value="hidden" /> 
+        <input class="outer" type="checkbox" name="visibility" value="hidden" />
         visibility: hidden<br />
-        <input class="outer" type="checkbox" name="display" value="none" /> 
+        <input class="outer" type="checkbox" name="display" value="none" />
         display: none<br />
-        <input class="outer" type="checkbox" name="opacity" value="0" /> 
+        <input class="outer" type="checkbox" name="opacity" value="0" />
         opacity: 0<br />
         <br />
         <label>#inner</label>
-        <input class="inner" type="checkbox" name="position" value="absolute" /> 
+        <input class="inner" type="checkbox" name="position" value="absolute" />
         position: absolute<br />
-        <input class="inner" type="checkbox" name="visibility" value="hidden" /> 
+        <input class="inner" type="checkbox" name="visibility" value="hidden" />
         visibility: hidden<br />
-        <input class="inner" type="checkbox" name="display" value="none" /> 
+        <input class="inner" type="checkbox" name="display" value="none" />
         display: none<br />
-        <input class="inner" type="checkbox" name="opacity" value="0" /> 
+        <input class="inner" type="checkbox" name="opacity" value="0" />
         opacity: 0<br />
       </form>
-      
+
       <div id="operation">
         <div id="outer">
           <span>#outer</span>
@@ -80,23 +80,23 @@
           </div>
         </div>
       </div>
-      
+
       <div id="display"></div>
       <h3 id="info">
         Demo provides by <a href="http://dreamerslab.com/">DreamersLab</a>
       </h3>
     </div>
-    
+
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.3/jquery.min.js"></script>
     <script type="text/javascript" src="../jquery.actual.min.js"></script>
     <script type="text/javascript" charset="utf-8">
-    
+
       // wrap everything in a anonymous function to prevent global
       ( function( $ ){
-        
+
         // the testing result with default jquery width() and this plugin actual('width')
         var result = function(){
-          
+
           // THE ACTUAL DEMO CODE
           // empty display area before append new result
           $( '#display' ).
@@ -104,49 +104,49 @@
             append( '<p>$( "#inner" ).width(); => ' + $( '#inner' ).width() + 'px</p>' ).
             append( '<p>$( "#inner" ).actual( "width" ); => ' + $( '#inner' ).actual( 'width' ) + 'px</p>' );
         },
-        
+
         switchCss = function( callback ){
-          
+
           // cache dom element
           $checkbox = $( ':checkbox' );
-          
+
           // change result on clicke event
           $checkbox.bind( 'click', function(){
-            
+
             // vars to store selected css for #outer and #inner
             var outerCss = {},
                 innerCss = {};
-                
+
             // get each selected css props for #outer element
             $checkbox.filter( '.outer:checked' ).each( function(){
               var $this = $( this );
               outerCss[ $this.attr( 'name' )] = $this.val();
             });
-            
+
             // get each selected css props for #inner element
             $checkbox.filter( '.inner:checked' ).each( function(){
               var $this = $( this );
               innerCss[ $this.attr( 'name' )] = $this.val();
             });
-            
+
             // clear all style before apply new styles
             $( '#outer' ).removeAttr( 'style' ).css( outerCss );
             $( '#inner' ).removeAttr( 'style' ).css( innerCss );
-            
+
             // fire callback function if any
             if( callback ) callback.call( this );
           });
         };
-        
+
         // when document is ready show the initial result
-        // when user switchs the css props shows the new result 
-        $( function(){  
+        // when user switchs the css props shows the new result
+        $( function(){
           result();
           switchCss( result );
         });
-        
+
       })( jQuery );
-      
+
     </script>
     <script type="text/javascript" charset="utf-8">
       // google analytics
