@@ -1,7 +1,7 @@
 /*! Copyright 2012, Ben Lin (http://dreamerslab.com/)
  * Licensed under the MIT License (LICENSE.txt).
  *
- * Version: 1.0.11
+ * Version: 1.0.12
  *
  * Requires: jQuery 1.2.3 ~ 1.8.2
  */
@@ -21,7 +21,7 @@
 
       var configs = $.extend( defaults, options );
 
-      var $target = this.filter( ':first' );
+      var $target = this.eq( 0 );
       var fix, restore;
 
       if( configs.clone === true ){
