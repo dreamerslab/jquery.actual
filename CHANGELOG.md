@@ -1,5 +1,11 @@
 # jQuery Actual Plugin CHANGELOG
 
+## 1.0.12
+
+- [refactoring] Use `.eq( 0 )` instead of `.filter( ':first' )` for better performance, thanks to Matt Hinchliffe
+
+
+
 ## 1.0.11
 
 - [refactoring] Select only the first hidden element to improve the perfomance
