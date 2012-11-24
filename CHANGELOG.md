@@ -1,5 +1,11 @@
 # jQuery Actual Plugin CHANGELOG
 
+## 1.0.13
+
+- [bug fix] Local variable `style` not initialized, thanks to [Searle](https://github.com/Searle)
+
+
+
 ## 1.0.12
 
 - [refactoring] Use `.eq( 0 )` instead of `.filter( ':first' )` for better performance, thanks to Matt Hinchliffe
