@@ -1,7 +1,7 @@
 /*! Copyright 2012, Ben Lin (http://dreamerslab.com/)
  * Licensed under the MIT License (LICENSE.txt).
  *
- * Version: 1.0.12
+ * Version: 1.0.13
  *
  * Requires: jQuery 1.2.3 ~ 1.8.2
  */
@@ -40,8 +40,9 @@
           $target.remove();
         };
       }else{
-        var tmp = [];
-        var $hidden, style;
+        var tmp   = [];
+        var style = '';
+        var $hidden;
 
         fix = function (){
           // get all hidden parents
