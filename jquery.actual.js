@@ -1,9 +1,9 @@
 /*! Copyright 2012, Ben Lin (http://dreamerslab.com/)
  * Licensed under the MIT License (LICENSE.txt).
  *
- * Version: 1.0.13
+ * Version: 1.0.14
  *
- * Requires: jQuery 1.2.3 ~ 1.8.2
+ * Requires: jQuery 1.2.3 ~ 1.9.0
  */
 ;( function ( $ ){
   $.fn.extend({
@@ -46,10 +46,10 @@
 
         fix = function (){
           // get all hidden parents
-          $hidden = $target.
-            parents().
-            andSelf().
-            filter( ':hidden' );
+          if ($.fn.jquery >= "1.8.0")
+            $hidden = $target.parents().addBack().filter( ':hidden' );
+          else
+            $hidden = $target.parents().andSelf().filter( ':hidden' );
 
           style += 'visibility: hidden !important; display: block !important; ';
 
