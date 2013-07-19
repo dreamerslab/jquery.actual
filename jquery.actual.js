@@ -46,9 +46,9 @@
 
         fix = function (){
           // get all hidden parents
-          if ($.fn.jquery >= "1.8.0")
+          if (typeof $.fn.addBack === "function")
             $hidden = $target.parents().addBack().filter( ':hidden' );
-          else
+          else // if (typeof $.fn.andSelf === "function")
             $hidden = $target.parents().andSelf().filter( ':hidden' );
 
           style += 'visibility: hidden !important; display: block !important; ';
