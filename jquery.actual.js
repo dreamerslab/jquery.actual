@@ -85,7 +85,7 @@
       // get the actual value with user specific methed
       // it can be 'width', 'height', 'outerWidth', 'innerWidth'... etc
       // configs.includeMargin only works for 'outerWidth' and 'outerHeight'
-      var actual = /(outer)/g.test( method ) ?
+      var actual = /(outer)/.test( method ) ?
         $target[ method ]( configs.includeMargin ) :
         $target[ method ]();
 
