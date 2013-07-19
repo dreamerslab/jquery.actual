@@ -1,5 +1,9 @@
 # jQuery Actual Plugin CHANGELOG
 
+## 1.0.14
+
+- Added support for jQuery 1.9.0
+
 ## 1.0.13
 
 - [bug fix] Local variable `style` not initialized, thanks to [Searle](https://github.com/Searle)
