@@ -6,7 +6,10 @@
  * Requires: jQuery >= 1.2.3
  */
 ;( function ( $ ){
+  var addBack = $.fn.addBack ? 'addBack' : 'andSelf';
+
   $.fn.extend({
+
     actual : function ( method, options ){
       // check if the jQuery method exist
       if( !this[ method ]){
@@ -46,12 +49,8 @@
 
         fix = function (){
           // get all hidden parents
-          if (typeof $.fn.addBack === "function")
-            $hidden = $target.parents().addBack().filter( ':hidden' );
-          else // if (typeof $.fn.andSelf === "function")
-            $hidden = $target.parents().andSelf().filter( ':hidden' );
-
-          style += 'visibility: hidden !important; display: block !important; ';
+          $hidden = $target.parents()[ addBack ]().filter( ':hidden' );
+          style   += 'visibility: hidden !important; display: block !important; ';
 
           if( configs.absolute === true ) style += 'position: absolute !important; ';
 
