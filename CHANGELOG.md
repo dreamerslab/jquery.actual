@@ -1,5 +1,9 @@
 # jQuery Actual Plugin CHANGELOG
 
+## 1.0.15
+
+- [bug fix] Replaced jQuery version detection with feature detection. Previously this would not properly detect jQuery 1.10+
+
 ## 1.0.14
 
 - Added support for jQuery 1.9.0
