@@ -6,7 +6,7 @@
  * Requires: jQuery >= 1.2.3
  */
 ;( function ( $ ){
-  var addBack = $.fn.addBack ? 'addBack' : 'andSelf';
+  $.fn.addBack = $.fn.addBack || $.fn.andSelf;
 
   $.fn.extend({
 
@@ -49,7 +49,7 @@
 
         fix = function (){
           // get all hidden parents
-          $hidden = $target.parents()[ addBack ]().filter( ':hidden' );
+          $hidden = $target.parents().addBack().filter( ':hidden' );
           style   += 'visibility: hidden !important; display: block !important; ';
 
           if( configs.absolute === true ) style += 'position: absolute !important; ';
