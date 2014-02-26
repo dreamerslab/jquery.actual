@@ -57,11 +57,12 @@
           // save the origin style props
           // set the hidden el css to be got the actual value later
           $hidden.each( function (){
-            var $this = $( this );
-
             // Save original style. If no style was set, attr() returns undefined
-            tmp.push( $this.attr( 'style' ));
-            $this.attr( 'style', style );
+            var $this = $( this ), thisStyle = $this.attr( 'style' );
+
+            tmp.push( thisStyle );
+            // Retain as much of the original style as possible, if there is one
+            $this.attr( 'style', thisStyle ? thisStyle + ';' + style : style);
           });
         };
 
