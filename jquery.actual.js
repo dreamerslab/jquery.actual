@@ -1,7 +1,7 @@
 /*! Copyright 2012, Ben Lin (http://dreamerslab.com/)
  * Licensed under the MIT License (LICENSE.txt).
  *
- * Version: 1.0.15
+ * Version: 1.0.16
  *
  * Requires: jQuery >= 1.2.3
  */
@@ -58,11 +58,12 @@
           // set the hidden el css to be got the actual value later
           $hidden.each( function (){
             // Save original style. If no style was set, attr() returns undefined
-            var $this = $( this ), thisStyle = $this.attr( 'style' );
+            var $this     = $( this );
+            var thisStyle = $this.attr( 'style' );
 
             tmp.push( thisStyle );
             // Retain as much of the original style as possible, if there is one
-            $this.attr( 'style', thisStyle ? thisStyle + ';' + style : style);
+            $this.attr( 'style', thisStyle ? thisStyle + ';' + style : style );
           });
         };
 
