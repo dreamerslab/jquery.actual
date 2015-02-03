@@ -5,7 +5,15 @@
  *
  * Requires: jQuery >= 1.2.3
  */
-;( function ( $ ){
+;( function ( factory ) {
+if ( typeof define === 'function' && define.amd ) {
+    // AMD. Register module depending on jQuery using requirejs define.
+    define( ['jquery'], factory );
+} else {
+    // No AMD.
+    factory( jQuery );
+}
+}( function ( $ ){
   $.fn.addBack = $.fn.addBack || $.fn.andSelf;
 
   $.fn.extend({
@@ -95,4 +103,4 @@
       return actual;
     }
   });
-})( jQuery );
+}));
