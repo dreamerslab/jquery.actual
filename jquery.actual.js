@@ -28,6 +28,7 @@ if ( typeof define === 'function' && define.amd ) {
         absolute      : false,
         clone         : false,
         includeMargin : false
+        display       : 'block'
       };
 
       var configs = $.extend( defaults, options );
@@ -58,7 +59,7 @@ if ( typeof define === 'function' && define.amd ) {
         fix = function (){
           // get all hidden parents
           $hidden = $target.parents().addBack().filter( ':hidden' );
-          style   += 'visibility: hidden !important; display: block !important; ';
+          style   += 'visibility: hidden !important; display: ' + configs.display + ' !important; ';
 
           if( configs.absolute === true ) style += 'position: absolute !important; ';
 
