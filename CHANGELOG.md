@@ -1,5 +1,11 @@
 # jQuery Actual Plugin CHANGELOG
 
+## 1.0.17
+
+- Added display inline support
+
+
+
 ## 1.0.16
 
 - [refactoring] Keep original element styles as far as possible

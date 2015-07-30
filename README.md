@@ -99,6 +99,7 @@ Example code:
 - [Ryan Millikin](https://github.com/dhamma)
 - [Jacob Quant](https://github.com/jacobq)
 - [ejn](https://github.com/ejn)
+- [Rudolf](https://github.com/qakovalyov)
 
 
 
