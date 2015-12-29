@@ -89,7 +89,7 @@ Example code:
     // please see demo/css3pie in action
     $( '.hidden' ).actual( 'width', { clone : true });
 
-    // if you are not use block element. By default { display: 'block' }.
+    // if it is not a block element. By default { display: 'block' }.
     // for example a inline element
     $( '.hidden' ).actual( 'width', { display: 'inline-block' });
 
