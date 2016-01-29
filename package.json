@@ -7,7 +7,7 @@
   "keywords": [
     "width", "height", "hidden element width", "hidden element height", "actual"
   ],
-  "dependencies": {
+  "peerDependencies": {
     "jquery": ">=1.2.3"
   },
   "contributors": [
