@@ -104,6 +104,7 @@ Example code:
 - [Jacob Quant](https://github.com/jacobq)
 - [ejn](https://github.com/ejn)
 - [Rudolf](https://github.com/qakovalyov)
+- [jamesallchin](https://github.com/jamesallchin)
 
 
 
