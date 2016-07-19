@@ -25,5 +25,6 @@
     "type"  : "MIT",
     "url"   : "LICENSE.txt"
   }],
+  "main": "jquery.actual.js",
   "homepage": "http://dreamerslab.com/blog/get-hidden-elements-width-and-height-with-jquery/"
 }
