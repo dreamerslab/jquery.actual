@@ -1,5 +1,11 @@
 # jQuery Actual Plugin CHANGELOG
 
+## 1.0.19
+
+- Add `main` property to `package.json`
+
+
+
 ## 1.0.18
 
 - Depend on jQuery as a peer

@@ -6,7 +6,7 @@ var where = 'client'; // where to install: 'client' or 'server'. For both, pass 
 
 Package.describe({
     name: packageName,
-    version: '1.0.18',
+    version: '1.0.19',
     // Brief, one-line summary of the package.
     summary: 'Get the actual width/height of invisible DOM elements with jQuery.',
     // URL to the Git repository containing the source code for this package.
