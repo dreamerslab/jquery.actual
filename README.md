@@ -1,35 +1,25 @@
-# jQuery Actual Plugin
+# Javascript Actual Plugin
 
-Get the actual width/height of invisible DOM elements with jQuery.
+Get the actual width/height of invisible DOM elements in pure javascript without jQuery. Based on [dreamerslab/jquery.actual](https://github.com/dreamerslab/jquery.actual)
 
 
 
 ## Description
 
-jQuery has trouble finding the width/height of invisible DOM elements. With element or its parent element has css property 'display' set to 'none'. `$('.hidden').width();` will return 0 instead of the actual width; This plugin simply fix it.
-
-
-
-## Demo
-
-- Normal usage see demo/normal.html
-- If you use [css3pie](http://css3pie.com/) you might also want to take a look at another demo( demo/css3pie.html )
-- Live demo please take a look at [this](http://dreamerslab.com/demos/get-hidden-element-width-with-jquery-actual-plugin) and [this](http://dreamerslab.com/demos/get-hidden-element-width-with-jquery-actual-plugin-with-css3pie/)
-
-
+Javascript has trouble finding the width/height of invisible DOM elements. With element or its parent element has css property 'display' set to 'none'. `document.querySelector('.hiddden').width();` will return 0 instead of the actual width; This plugin simply fix it.
 
 ## Documentation
 
-- There is a syntax highlight version, please see [this post](http://dreamerslab.com/blog/en/get-hidden-elements-width-and-height-with-jquery/)
-- For chinese version please go [here](http://dreamerslab.com/blog/tw/get-hidden-elements-width-and-height-with-jquery/)
+### actual( method[, options] )
 
+- `method` - string with name of css property (width, height etc.)
+- `options` (object): An object containing additional options for the function. Possible properties are:
+    - `absolute` (boolean, default: false): Whether to return the absolute value of the result.
+    - `clone` (boolean, default: false): Whether to return a clone of the result instead of the original value.
+    - `display` (string, default: "block"): The value to be used for the display CSS property of the result.
+    - `convertToNumber` (boolean, default: false): Whether to convert the result to a number before returning it.
 
-
-## Requires
-
-- jQuery >= 1.2.3
-
-
+<!-- todo: add info about return -->
 
 ## Browser Compatibility
 
@@ -47,51 +37,37 @@ jQuery has trouble finding the width/height of invisible DOM elements. With elem
 
 <!-- -->
 
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="path-to-file/jquery.actual.js"></script>
-
+    <script type="text/javascript" src="path-to-file/js.actual.js"></script>
 
 
 ## Usage
 
 Example code:
 
-    // get hidden element actual width
-    $( '.hidden' ).actual( 'width' );
+    // get hidden element actual width with units (px and etc)
+    document.getElementsByClassName( 'hidden' ).actual( 'width' );
+    // 200px
 
-    // get hidden element actual innerWidth
-    $( '.hidden' ).actual( 'innerWidth' );
-
-    // get hidden element actual outerWidth
-    $( '.hidden' ).actual( 'outerWidth' );
-
-    // get hidden element actual outerWidth and set the `includeMargin` argument
-    $( '.hidden' ).actual( 'outerWidth', { includeMargin : true });
+    // get hidden element actual width with convert to number
+    document.getElementById( '.hidden' ).actual( 'width', { convertToNumber: true } );
+    // 200
 
     // get hidden element actual height
-    $( '.hidden' ).actual( 'height' );
-
-    // get hidden element actual innerHeight
-    $( '.hidden' ).actual( 'innerHeight' );
-
-    // get hidden element actual outerHeight
-    $( '.hidden' ).actual( 'outerHeight' );
-
-    // get hidden element actual outerHeight and set the `includeMargin` argument
-    $( '.hidden' ).actual( 'outerHeight', { includeMargin : true });
+    document.querySelector( '.hidden' ).actual( 'height', { convertToNumber: true } );
+    // 100
 
     // if the page jumps or blinks, pass a attribute '{ absolute : true }'
     // be very careful, you might get a wrong result depends on how you makrup your html and css
-    $( '.hidden' ).actual( 'height', { absolute : true });
+    document.querySelector( '.hidden' ).actual( 'height', { absolute : true } );
 
     // if you use css3pie with a float element
     // for example a rounded corner navigation menu you can also try to pass a attribute '{ clone : true }'
     // please see demo/css3pie in action
-    $( '.hidden' ).actual( 'width', { clone : true });
+    document.querySelector( '.hidden' ).actual( 'width', { clone : true });
 
     // if it is not a block element. By default { display: 'block' }.
     // for example a inline element
-    $( '.hidden' ).actual( 'width', { display: 'inline-block' });
+    document.querySelector( '.hidden' ).actual( 'width', { display: 'inline-block' });
 
 
 
